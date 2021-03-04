@@ -1,0 +1,404 @@
+Source,Type,Medcode/prodcode,Term,Therapy
+G,M,x9833,Nicotine replacement therapy,P
+G,M,x10211,Smoking cessation milestones,O
+G,M,x11356,Seen by smoking cessation advisor,O
+G,M,x12953,Attends stop smoking monitor.,O
+G,M,x18573,Referral to smoking cessation advisor,O
+G,M,x19485,Stop smoking monitor.chck done,O
+G,M,x25106,Nicotine replacement therapy provided free,P
+G,M,x32572,Over the counter nicotine replacement therapy,P
+G,M,x38112,Smoking cessation programme start date,O
+G,M,x67178,Nicotine replacement therapy provided by community pharmacis,P
+G,M,x74907,Smoking cessation therapy,O
+G,M,x81440,Nicotine replacement therapy using nicotine patches,P
+G,M,x85247,Nicotine replacement therapy using nicotine inhalator,P
+G,M,x85975,Nicotine replacement therapy using nicotine gum,P
+G,M,x89464,Nicotine replacement therapy using nicotine lozenges,P
+G,M,x90522,Smoking cessation therapy NOS,O
+G,M,x91708,Other specified smoking cessation therapy,O
+G,M,x94958,Smoking cessation drug therapy,P
+G,M,x98154,Referral to NHS stop smoking service,O
+G,M,x98245,Stop smoking face to face follow-up,O
+G,M,x101385,Consent given for follow-up by smoking cessation team,O
+G,M,x101634,Consent given follow-up after smoking cessation intervention,O
+G,M,x101764,Practice based smoking cessation programme start date,O
+G,M,x105710,Smoking cessation 12 week follow-up,O
+G,M,x106359,Referral to smoking cessation service,O
+G,M,x109716,Issue of nicotine replacement therapy voucher,P
+G,P,x116,NICOTINE TRANSDERMAL PATCH 30CM,P
+G,P,x467,Zyban 150mg modified-release tablets (GlaxoSmithKline UK Ltd),P
+G,P,x1248,Nicorette 10mg/ml Nasal spray (Pharmacia Ltd),P
+G,P,x1703,Nicorette 15mg Transdermal patch (Pharmacia Ltd),P
+G,P,x2876,Nicorette Citrus 2mg medicated chewing gum (Pfizer Ltd),P
+G,P,x3404,Niquitin 21mg Transdermal patch (GlaxoSmithKline Consumer Healthcare),P
+G,P,x3818,Nicotinell tts 30 sq cm Transdermal patch (Novartis Consumer Health UK Ltd),P
+G,P,x4166,Nicorette Citrus 4mg medicated chewing gum (Pfizer Ltd),P
+G,P,x4704,Niquitin 7mg Transdermal patch (GlaxoSmithKline Consumer Healthcare),P
+G,P,x4717,Niquitin 14mg Transdermal patch (GlaxoSmithKline Consumer Healthcare),P
+G,P,x5115,Bupropion 150mg modified-release tablets,P
+G,P,x5320,Nicorette 10mg Inhalator (McNeil Products Ltd),P
+G,P,x5440,Nicorette 10mg Transdermal patch (Pharmacia Ltd),P
+G,P,x5457,Nicotine 5mg/16hours transdermal patches,P
+G,P,x5479,Nicotine 10mg/16hours transdermal patches,P
+G,P,x5502,Nicotine 15mg/16hours transdermal patches,P
+G,P,x5515,Nicotine 1mg Lozenge,P
+G,P,x5531,Nicotinell 1mg Lozenge (Novartis Consumer Health UK Ltd),P
+G,P,x5606,Nicotinell tts 20 sq cm Transdermal patch (Novartis Consumer Health UK Ltd),P
+G,P,x5659,NiQuitin 4mg lozenges original menthol mint (Omega Pharma Ltd),P
+G,P,x5700,NiQuitin 2mg lozenges original menthol mint (Omega Pharma Ltd),P
+G,P,x5758,Nicotine 4mg medicated chewing gum sugar free,P
+G,P,x5784,Nicotine 4mg lozenges sugar free,P
+G,P,x5877,Nicorette 2mg microtab (Pharmacia Ltd),P
+G,P,x5944,Nicotine 10mg inhalation cartridges with device,P
+G,P,x5946,Nicotinell 2mg Medicated chewing-gum (Novartis Consumer Health UK Ltd),P
+G,P,x6018,Nicorette 5mg Transdermal patch (Pharmacia Ltd),P
+G,P,x6323,Nicotine 2mg medicated chewing gum sugar free,P
+G,P,x6448,Nicotine 21mg/24hours transdermal patches,P
+G,P,x6565,NiQuitin Fresh Mint 2mg medicated chewing gum (Omega Pharma Ltd),P
+G,P,x6593,NiQuitin Mint 4mg lozenges (Omega Pharma Ltd),P
+G,P,x6630,NiQuitin Mint 2mg lozenges (Omega Pharma Ltd),P
+G,P,x6642,NiQuitin Fresh Mint 4mg medicated chewing gum (Omega Pharma Ltd),P
+G,P,x6698,Nicotinell 2mg lozenges (GlaxoSmithKline Consumer Healthcare),P
+G,P,x7303,Nicotinell tts 10 sq cm Transdermal patch (Novartis Consumer Health UK Ltd),P
+G,P,x7644,Nicabate 21mg Transdermal patch (Marion Merrell Dow Ltd),P
+G,P,x8297,NICOTINE TRANSDERMAL PATCH 20CM,P
+G,P,x8534,TRANSDERMAL NICOTINE PATCH 5 MG,P
+G,P,x8571,Nicotine 500micrograms/dose nasal spray,P
+G,P,x9591,Nicotine 14mg/24hours transdermal patches,P
+G,P,x9804,Nicotine 7mg/24hours transdermal patches,P
+G,P,x9806,Nicotine 2mg lozenges sugar free,P
+G,P,x10527,Nicabate 14mg Transdermal patch (Marion Merrell Dow Ltd),P
+G,P,x10623,Nicabate 7mg Transdermal patch (Marion Merrell Dow Ltd),P
+G,P,x11718,Nicotine 2mg sublingual tablets sugar free,P
+G,P,x13048,Nicotinell 4mg Medicated chewing-gum (Novartis Consumer Health UK Ltd),P
+G,P,x14556,TRANSDERMAL NICOTINE PATCH 10 MG,P
+G,P,x25510,Nicotine 2mg mint flavour chewing-gum,P
+G,P,x25516,Nicotine 4mg mint flavour chewing-gum,P
+G,P,x25523,Nicorette 2mg mint flavour chewing-gum (Pharmacia Ltd),P
+G,P,x27311,Niconil 22mg/24 hr Transdermal patch (Elan Pharma),P
+G,P,x27410,Champix 0.5mg/1mg 2 week treatment initiation pack (Pfizer Ltd),P
+G,P,x27411,Champix 1mg tablets (Pfizer Ltd),P
+G,P,x27412,Varenicline 1mg tablets and Varenicline 500microgram tablets,P
+G,P,x27414,Varenicline 1mg tablets,P
+G,P,x29680,Niconil 11mg/24 hr Transdermal patch (Elan Pharma),P
+G,P,x30086,NICORETTE MICROTAB,P
+G,P,x31939,Nicorette 4mg mint flavour chewing-gum (Pharmacia Ltd),P
+G,P,x33392,Nicotine 22mg/24 hr Transdermal patch,P
+G,P,x35035,Champix 0.5mg tablets (Pfizer Ltd),P
+G,P,x35089,Varenicline 500microgram tablets,P
+G,P,x36457,Nicopatch 21mg/24hours transdermal patches (Pierre Fabre Ltd),P
+G,P,x36618,Nicopatch 7mg/24hours transdermal patches (Pierre Fabre Ltd),P
+G,P,x36635,Nicopatch 14mg/24hours transdermal patches (Pierre Fabre Ltd),P
+G,P,x37646,Nicotine 1.5mg lozenges sugar free,P
+G,P,x37716,Nicopass 1.5mg Lozenge (Wockhardt UK Ltd),P
+G,P,x38958,Nicotinell 1mg lozenges (GlaxoSmithKline Consumer Healthcare),P
+G,P,x39046,Nicorette invisi 25mg/16hours patches (McNeil Products Ltd),P
+G,P,x39123,Nicotine 25mg/16hours transdermal patches,P
+G,P,x39166,Nicorette invisi 15mg/16hours patches (McNeil Products Ltd),P
+G,P,x39521,NiQuitin Pre-Quit Mint 4mg lozenges (Omega Pharma Ltd),P
+G,P,x39572,Nicorette invisi 10mg/16hours patches (McNeil Products Ltd),P
+G,P,x40617,Nicotinell TTS 20 patches (GlaxoSmithKline Consumer Healthcare),P
+G,P,x40620,Nicotinell TTS 30 patches (GlaxoSmithKline Consumer Healthcare),P
+G,P,x40683,Nicotinell TTS 10 patches (GlaxoSmithKline Consumer Healthcare),P
+G,P,x40730,NiQuitin Minis Mint 1.5mg lozenges (Omega Pharma Ltd),P
+G,P,x40865,NiQuitin Minis Mint 4mg lozenges (Omega Pharma Ltd),P
+G,P,x41040,Nicorette lemon 2mg microtab (McNeil Products Ltd),P
+G,P,x41356,Nicorette Microtab 2mg sublingual tablets (McNeil Products Ltd),P
+G,P,x41368,NiQuitin 21mg patches (Omega Pharma Ltd),P
+G,P,x41372,NiQuitin Clear 21mg patches (Omega Pharma Ltd),P
+G,P,x41376,Nicorette 15mg patches (McNeil Products Ltd),P
+G,P,x41377,Nicorette Original 2mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41425,Nicorette Freshmint 4mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41426,NiQuitin 7mg patches (Omega Pharma Ltd),P
+G,P,x41474,Nicorette 10mg patches (McNeil Products Ltd),P
+G,P,x41485,NiQuitin 14mg patches (Omega Pharma Ltd),P
+G,P,x41493,Nicorette Icy White 4mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41496,Nicorette 500micrograms/dose nasal spray (McNeil Products Ltd),P
+G,P,x41505,NiQuitin Clear 14mg patches (Omega Pharma Ltd),P
+G,P,x41507,NiQuitin Clear 7mg patches (Omega Pharma Ltd),P
+G,P,x41753,Nicorette Original 4mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41765,Nicotinell Mint 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x41778,Nicorette Fruitfusion 4mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41779,Nicorette Icy White 2mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41801,Nicorette Freshmint 2mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41802,Nicorette 5mg patches (McNeil Products Ltd),P
+G,P,x41808,Nicotinell Fruit 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x41809,Nicorette Mint 4mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41860,Nicotine bitartrate 2mg Sublingual tablet,P
+G,P,x41864,Nicorette Fruitfusion 2mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x41879,Nicotinell Liquorice 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x41881,Nicotinell Classic 2mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+G,P,x41909,Nicotinell Mint 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x41923,Nicotine 15mg/16 hours transdermal patches and Nicotine 2mg medicated chewing gum sugar free,P
+G,P,x41931,Nicotinell Fruit 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x42011,Nicotinell Classic 4mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+G,P,x42016,Nicorette Mint 2mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x42047,Nicotinell Liquorice 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x42048,Nicotine bitartrate 1mg lozenges sugar free,P
+G,P,x42221,Nicotine 4mg lozenges sugar free (Teva UK Ltd),P
+G,P,x42286,Nicotine bitartrate 2mg lozenges sugar free,P
+G,P,x42400,Nicorette combi 15mg transdermal patches + 2mg medicated gum (McNeil Products Ltd),P
+G,P,x44106,NiQuitin Minis Cherry 1.5mg lozenges (Omega Pharma Ltd),P
+G,P,x45429,Nicorette QuickMist 1mg/dose mouthspray (McNeil Products Ltd),P
+G,P,x45504,Nicotine 1mg/dose oromucosal spray sugar free,P
+G,P,x45603,Nicorette Freshmint 2mg lozenges (McNeil Products Ltd),P
+G,P,x46588,Nicotinell Icemint 2mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+G,P,x46592,Nicorette 15mg Inhalator (McNeil Products Ltd),P
+G,P,x46701,Nicotinell Icemint 4mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+G,P,x46717,Nicotine 15mg inhalation cartridges with device,P
+G,P,x48620,Boots NicAssist 10mg Inhalator (The Boots Company Plc),P
+G,P,x49088,NiQuitin Clear 21mg patches (Waymade Healthcare Plc),P
+G,P,x49204,Champix 0.5mg/1mg 2 week treatment initiation pack (Mawdsley-Brooks & Company Ltd),P
+G,P,x49305,Nicorette Cools 2mg lozenges (McNeil Products Ltd),P
+G,P,x49319,Nicorette Cools 4mg lozenges (McNeil Products Ltd),P
+G,P,x49607,Boots NicAssist 15mg patches (The Boots Company Plc),P
+G,P,x49901,Champix 1mg tablets (Waymade Healthcare Plc),P
+G,P,x50487,NiQuitin Clear 14mg patches (Waymade Healthcare Plc),P
+G,P,x50541,Champix 0.5mg/1mg 2 week treatment initiation pack (Sigma Pharmaceuticals Plc),P
+G,P,x54102,NiQuitin Pre-Quit Clear 21mg patches (Omega Pharma Ltd),P
+G,P,x54574,Boots NicAssist Minty Fresh 4mg medicated chewing gum (The Boots Company Plc),P
+G,P,x55417,Zyban 150mg modified-release tablets (Lexon (UK) Ltd),P
+G,P,x55590,Nicotine 11mg/24 hr Transdermal patch,P
+G,P,x56552,Boots NicAssist Minty Fresh 2mg medicated chewing gum (The Boots Company Plc),P
+G,P,x57417,Nicorette 5mg patches (Waymade Healthcare Plc),P
+G,P,x57829,NiQuitin Strips Mint 2.5mg oral films (Omega Pharma Ltd),P
+G,P,x58034,Nicotine 2.5mg orodispersible films sugar free,P
+G,P,x58410,NiQuitin Minis Orange 1.5mg lozenges (Omega Pharma Ltd),P
+G,P,x58675,Boots NicAssist 5mg patches (The Boots Company Plc),P
+G,P,x60236,Boots NicAssist 10mg patches (The Boots Company Plc),P
+G,P,x61777,Nicotinell Support Icemint 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x62246,Nicotinell Support Icemint 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+G,P,x65406,Nicorette Fruitfusion 6mg medicated chewing gum (McNeil Products Ltd),P
+G,P,x65765,Nicotine 6mg medicated chewing gum sugar free,P
+G,P,x65968,Boots NicAssist 15mg Inhalator (The Boots Company Plc),P
+G,P,x66101,Boots NicAssist Translucent 10mg/16hours patches (The Boots Company Plc),P
+G,P,x66285,Boots NicAssist 21mg/24hours transdermal patches (The Boots Company Plc),P
+G,P,x66376,Nicotine 0.35mg Lozenge,P
+G,P,x66460,Boots NicAssist Microtab 2mg sublingual tablets (The Boots Company Plc),P
+G,P,x66614,Boots NicAssist 14mg/24hours transdermal patches (The Boots Company Plc),P
+G,P,x66778,Champix 0.5mg/1mg 4 week treatment initiation pack (Pfizer Ltd),P
+G,P,x67143,Boots NicAssist 2mg lozenges (The Boots Company Plc),P
+G,P,x67802,Nicorette 10mg patches (Waymade Healthcare Plc),P
+G,P,x68621,Boots NicAssist 1mg lozenges (The Boots Company Plc),P
+G,P,x68879,Boots NicAssist 10mg/ml nasal spray (The Boots Company Plc),P
+G,P,x71101,Nicorette 15mg patches (Waymade Healthcare Plc),P
+G,P,x71238,NiQuitin Extra Fresh Mint 2mg medicated chewing gum (Omega Pharma Ltd),P
+G,P,x71539,NiQuitin Extra Fresh Mint 4mg medicated chewing gum (Omega Pharma Ltd),P
+G,P,x72553,Boots NicAssist Translucent 25mg/16hours patches (The Boots Company Plc),P
+G,P,x72740,Boots NicAssist Fruit Fresh 4mg medicated chewing gum (The Boots Company Plc),P
+G,P,x72950,Nicotine 7mg/24hours transdermal patches (Ennogen Healthcare Ltd),P
+G,P,x73322,Boots NicAssist 7mg/24hours transdermal patches (The Boots Company Plc),P
+G,P,x73595,Nicorette QuickMist 1mg/dose mouthspray cool berry (McNeil Products Ltd),P
+G,P,x74163,Nicorette Fruit 2mg lozenges (McNeil Products Ltd),P
+G,P,x76301,Zyban 150mg modified-release tablets (DE Pharmaceuticals),P
+G,P,x76405,Nicotine 7mg/24hours transdermal patches (J M McGill Ltd),P
+G,P,x76445,Boots NicAssist Ice Mint 2mg medicated chewing gum (The Boots Company Plc),P
+G,P,x76658,Champix 1mg tablets (DE Pharmaceuticals),P
+G,P,x77112,Boots NicAssist Fruit Fresh 2mg medicated chewing gum (The Boots Company Plc),P
+G,P,x78481,Boots NicAssist Ice Mint 4mg medicated chewing gum (The Boots Company Plc),P
+G,P,x79521,Zyban 150mg modified-release tablets (CST Pharma Ltd),P
+G,P,x79789,Nicotine 450micrograms/dose inhaler,P
+G,P,x79851,Voke 0.45mg/dose inhaler (Kind Consumer Ltd),P
+G,P,x80700,Boots NicAssist Translucent 15mg/16hours patches (The Boots Company Plc),P
+G,P,x80894,Champix 1mg tablets (Mawdsley-Brooks & Company Ltd),P
+G,P,x81064,Nicorette QuickMist SmartTrack 1mg/dose mouthspray (McNeil Products Ltd),P
+A,M,x459524018,Over the counter nicotine replacement therapy,P
+A,M,x457286014,Nicotine replacement therapy,P
+A,M,x1773560017,Smoking cessation programme start date,O
+A,M,x1780273014,Seen by smoking cessation advisor,O
+A,M,x1484932017,Smoking cessation milestones,O
+A,M,x1489355012,Referral to smoking cessation advisor,O
+A,M,x402431000033116,Nicotinell Tts 10,P
+A,M,x402531000033117,Nicotinell Tts 20,P
+A,M,x492511000000117,Smoking cessation therapy,O
+A,M,x482771000000118,Smoking cessation drug therapy,P
+A,M,x402631000033118,Nicotinell Tts 30,P
+A,M,x556831000033118,Nicorette Inhalator,P
+A,M,x482831000000114,Nicotine replacement therapy using nicotine inhalator,P
+A,M,x236031000033115,Nicorette,P
+A,M,x729631000033113,Nicotinell,P
+A,M,x761321000033113,Bupropion Hydrochloride,P
+A,M,x629231000033116,Niquitin,P
+A,M,x852131000006112,Smoking cessation-practice nurse support,O
+A,M,x904081000006119,Smoking cessation 52 week follow up,O
+A,M,x904151000006114,Smoking cessation 4 week F/U completed,O
+A,M,x904161000006111,Smoking cessation 52 week F/U completed,O
+A,M,x904171000006116,Smoking cessation 52 week F/U not completed,O
+A,M,x904181000006118,Smoking cessation counselling,O
+A,M,x904061000006112,Free NRT voucher,P
+A,M,x904011000006114,Smoking cessation declaration signed by patient,O
+A,M,x904201000006117,Smoking cessation confidence score,O
+A,M,x904221000006110,Smoking cessation bupropion therapy,P
+A,M,x904231000006113,Smoking cessation counselling by telephone,O
+A,M,x913721000033117,Varenicline Tartrate,P
+A,M,x825531000033114,Boots Nicotine,P
+A,M,x700331000033119,Zyban,P
+A,M,x675531000033115,Nicorette Microtab,P
+A,M,x1032531000033119,Champix,P
+A,M,x972721000033118,Nicotine Bitartrate,P
+A,M,x904241000006115,Smoking cessation counselling in person,O
+A,M,x1007331000033115,Nicotinell Classic,P
+A,M,x1563081000000115,Practice based smoking cessation programme start date,O
+A,M,x1160931000033114,Nicorette Invisi,P
+A,M,x1218031000033113,Niquitin Minis,P
+A,M,x1236031000033115,Nicorette Combi,P
+A,M,x1771191000006119,Attends smoking cessation clinic not at practice,O
+A,M,x1626121000006116,Smoking cessation drug therapy - varenicline,P
+A,M,x1754091000000110,Issue of nicotine replacement therapy voucher,P
+A,M,x1755201000006117,Consent given for follow-up evaluation after smoking cessation intervention,O
+A,M,x1778181000006110,Group session: Stop smoking education programme,O
+A,M,x1777011000006118,Reason for referral: Smoking Cessation,O
+A,M,x1676351000006110,Nicotine replacement therapy using nicotine sublingual tablets,P
+A,M,x1833971000006116,Stop Smoking satisfaction questionnaire given,O
+A,M,x1925121000006113,Issue of nicotine replacement therapy voucher,P
+A,M,x1823811000006115,Smoking cessation 12 week follow up,O
+A,M,x1825081000006118,Smoking cessation 12 week F/U completed,O
+A,M,x1979481000006118,Nicotine replacement therapy using nicotine mouth spray,P
+A,M,x1979491000006115,Smoking cessation follow-up,O
+A,M,x2135531000033115,Nicotinell Support,P
+A,M,x2244931000033112,Champix 2 Week Treatment Initiation Pack,P
+A,M,x2245031000033112,Champix 4 Week Treatment Initiation Pack,P
+A,M,x1920431000033112,Nicorette Cools,P
+A,M,x2638471000000118,Varenicline therapy,P
+A,M,x2638511000000110,Bupropion therapy,P
+A,M,x482871000000111,Other specified smoking cessation therapy,O
+A,M,x482851000000119,Nicotine replacement therapy using nicotine lozenges,P
+A,M,x482791000000119,Nicotine replacement therapy using nicotine patches,P
+A,M,x998861000006112,Nicotine replacement therapy provided by community pharmacis,P
+A,M,x1715591000006117,Referral to NHS stop smoking service,O
+A,M,x2251911000000114,Referral to smoking cessation service,O
+A,M,x2354231000033113,Niquitin Extra Fresh Mint,P
+A,M,x1295131000033117,Nicorette Quickmist,P
+A,M,x1662911000000114,Consent given for follow-up by smoking cessation team,O
+A,M,x904071000006117,Smoking cessation 4 week follow up,O
+A,M,x482811000000118,Nicotine replacement therapy using nicotine gum,P
+A,M,x1032631000033115,Champix Treatment Initiation Pack,P
+A,M,x827631000033115,Niquitin Clear,P
+A,P,x2280541000033112,Nicotinell Chewing gum 4 mg,P
+A,P,x2795641000033111,Nicotine Chewing gum (mint) Sugar Free 2 mg,P
+A,P,x968441000033111,Nicorette Chewing gum 2 mg,P
+A,P,x2280741000033116,Nicotine Lozenges (Mint) Sugar Free 1 mg,P
+A,P,x2654141000033118,Niquitin Lozenges 2 mg,P
+A,P,x4188341000033113,Nicotine Lozenges Sugar Free 1 mg,P
+A,P,x2975241000033114,Nicotine Lozenges (Mint) Sugar Free 2 mg,P
+A,P,x4500741000033119,"Nicorette Chewing gum Cinnamint, 4 mg",P
+A,P,x1768341000033114,Nicotine Inhalation cartridge with mouthpiece (starter pack) 10 mg/cartridge,P
+A,P,x4186741000033113,"Nicorette Chewing gum Freshfruit, 2 mg",P
+A,P,x968541000033112,Nicorette Chewing gum 4 mg,P
+A,P,x970441000033115,Nicotine Inhalation cartridge with mouthpiece (refill) 10 mg/cartridge,P
+A,P,x970341000033114,Nicorette Inhalator Inhalation cartridge with mouthpiece (refill) 10 mg/cartridge,P
+A,P,x2654241000033113,Niquitin Lozenges 4 mg,P
+A,P,x1768241000033116,Nicorette Inhalator Inhalation cartridge with mouthpiece (starter pack) 10 mg/cartridge,P
+A,P,x2975341000033116,Nicotine Lozenges (Mint) Sugar Free 4 mg,P
+A,P,x4500641000033111,"Nicorette Chewing gum Cinnamint, 2 mg",P
+A,P,x4186841000033115,"Nicorette Chewing gum Freshfruit, 4 mg",P
+A,P,x2795441000033114,Nicotine Chewing gum (mint) Sugar Free 4 mg,P
+A,P,x2280441000033111,Nicotinell Chewing gum 2 mg,P
+A,P,x3997141000033114,"Champix Treatment Initiation Pack Tablets 11 x 500 micrograms, 14 x 1 mg",P
+A,P,x4213341000033116,Nicopatch 7mg/24hours transdermal patches (Pierre Fabre Ltd),P
+A,P,x1745741000033113,Nicotine 7mg/24hours transdermal patches,P
+A,P,x2724441000033116,Boots NRT 7mg/24hours patches (The Boots Company Plc),P
+A,P,x1745441000033118,NiQuitin 7mg patches (Omega Pharma Ltd),P
+A,P,x973141000033117,Nicotinell TTS 10 patches (GlaxoSmithKline Consumer Healthcare),P
+A,P,x2729241000033116,NiQuitin Clear 7mg patches (Omega Pharma Ltd),P
+A,P,x8232641000033114,NiQuitin Pre-Quit Clear 21mg patches (Omega Pharma Ltd),P
+A,P,x973341000033119,Nicotinell TTS 30 patches (GlaxoSmithKline Consumer Healthcare),P
+A,P,x2724241000033117,Boots Nicotine 21mg/24hours patches (The Boots Company Plc),P
+A,P,x1745341000033112,NiQuitin 21mg patches (Omega Pharma Ltd),P
+A,P,x2729441000033115,NiQuitin Clear 21mg patches (Omega Pharma Ltd),P
+A,P,x1745641000033116,Nicotine 21mg/24hours transdermal patches,P
+A,P,x4213541000033111,Nicopatch 21mg/24hours transdermal patches (Pierre Fabre Ltd),P
+A,P,x1746041000033118,Nicotine 5mg/16hours transdermal patches,P
+A,P,x978041000033110,Nicorette 5mg patches (McNeil Products Ltd),P
+A,P,x4270541000033111,Boots NicAssist 5mg patches (The Boots Company Plc),P
+A,P,x972641000033119,Nicorette 500micrograms/dose nasal spray (McNeil Products Ltd),P
+A,P,x2587141000033110,Nicotine 500micrograms/dose nasal spray,P
+A,P,x2003641000033114,Nicotine 2mg sublingual tablets sugar free,P
+A,P,x2003541000033113,Nicorette Microtab 2mg sublingual tablets (McNeil Products Ltd),P
+A,P,x3996741000033111,Varenicline 500microgram tablets,P
+A,P,x3996941000033114,Champix 0.5mg tablets (Pfizer Ltd),P
+A,P,x3997041000033110,Champix 1mg tablets (Pfizer Ltd),P
+A,P,x3996841000033118,Varenicline 1mg tablets,P
+A,P,x5073041000033111,Nicotine 10mg inhalation cartridges with device,P
+A,P,x5073141000033110,Nicorette 10mg Inhalator (McNeil Products Ltd),P
+A,P,x8056141000033112,Nicorette Cools 2mg lozenges (McNeil Products Ltd),P
+A,P,x12634441000033114,Nicorette Fruit 2mg lozenges (McNeil Products Ltd),P
+A,P,x2653941000033119,Nicotine 2mg lozenges sugar free,P
+A,P,x4575341000033119,NiQuitin 2mg lozenges original menthol mint (Omega Pharma Ltd),P
+A,P,x2975141000033119,NiQuitin Mint 2mg lozenges (Omega Pharma Ltd),P
+A,P,x8056241000033117,Nicorette Cools 4mg lozenges (McNeil Products Ltd),P
+A,P,x4913541000033110,NiQuitin 4mg lozenges original menthol mint (Omega Pharma Ltd),P
+A,P,x2654041000033117,Nicotine 4mg lozenges sugar free,P
+A,P,x2975441000033110,NiQuitin Mint 4mg lozenges (Omega Pharma Ltd),P
+A,P,x4816941000033118,NiQuitin Pre-Quit Mint 4mg lozenges (Omega Pharma Ltd),P
+A,P,x5265541000033117,NiQuitin Minis Mint 4mg lozenges (Omega Pharma Ltd),P
+A,P,x5895441000033110,Nicotine bitartrate 1mg lozenges sugar free,P
+A,P,x2280641000033113,Nicotinell 1mg lozenges (GlaxoSmithKline Consumer Healthcare),P
+A,P,x9693741000033118,Nicotinell Support Icemint 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x6430541000033117,Nicotinell Icemint 2mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+A,P,x12410241000033110,NiQuitin Extra Fresh Mint 2mg medicated chewing gum (Omega Pharma Ltd),P
+A,P,x968641000033113,Nicotine 2mg medicated chewing gum sugar free,P
+A,P,x3907341000033114,Nicotinell Mint 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x4186541000033117,Nicorette Mint 2mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x3907541000033119,Nicotinell Fruit 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x5100141000033115,Nicorette Original 2mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x2795741000033119,NiQuitin Fresh Mint 2mg medicated chewing gum (Omega Pharma Ltd),P
+A,P,x3907741000033110,Nicotinell Liquorice 2mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x3951741000033112,Nicorette Freshmint 2mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x3907941000033113,Nicotinell Classic 2mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+A,P,x4958041000033117,Nicorette Icy White 2mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x9599141000033110,Nicorette Fruitfusion 2mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x6426941000033111,Nicotinell Icemint 4mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+A,P,x9693841000033111,Nicotinell Support Icemint 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x12410341000033117,NiQuitin Extra Fresh Mint 4mg medicated chewing gum (Omega Pharma Ltd),P
+A,P,x9603241000033114,Nicorette Fruitfusion 4mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x4958141000033118,Nicorette Icy White 4mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x3908041000033111,Nicotinell Classic 4mg medicated chewing gum (Novartis Consumer Health UK Ltd),P
+A,P,x3951841000033119,Nicorette Freshmint 4mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x3907841000033117,Nicotinell Liquorice 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x3907641000033118,Nicotinell Fruit 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x3907441000033115,Nicotinell Mint 4mg medicated chewing gum (GlaxoSmithKline Consumer Healthcare),P
+A,P,x4186641000033116,Nicorette Mint 4mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x5100241000033110,Nicorette Original 4mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x2795541000033110,NiQuitin Fresh Mint 4mg medicated chewing gum (Omega Pharma Ltd),P
+A,P,x968741000033116,Nicotine 4mg medicated chewing gum sugar free,P
+A,P,x4188441000033119,Nicotinell 2mg lozenges (GlaxoSmithKline Consumer Healthcare),P
+A,P,x5895541000033111,Nicotine bitartrate 2mg lozenges sugar free,P
+A,P,x6117841000033111,Nicorette Freshmint 2mg lozenges (McNeil Products Ltd),P
+A,P,x11483341000033114,Champix 0.5mg/1mg 4 week treatment initiation pack (Pfizer Ltd),P
+A,P,x11483241000033116,Champix 0.5mg/1mg 2 week treatment initiation pack (Pfizer Ltd),P
+A,P,x4011741000033112,Varenicline 1mg tablets and Varenicline 500microgram tablets,P
+A,P,x8614641000033113,NiQuitin Minis Orange 1.5mg lozenges (Omega Pharma Ltd),P
+A,P,x4958241000033113,Nicotine 1.5mg lozenges sugar free,P
+A,P,x4419441000033114,Nicopass 1.5mg Liquorice Mint lozenges (Pierre Fabre Ltd),P
+A,P,x4419541000033110,Nicopass 1.5mg Fresh Mint lozenges (Pierre Fabre Ltd),P
+A,P,x6036941000033117,NiQuitin Minis Cherry 1.5mg lozenges (Omega Pharma Ltd),P
+A,P,x5265441000033118,NiQuitin Minis Mint 1.5mg lozenges (Omega Pharma Ltd),P
+A,P,x4817541000033110,Nicotine 25mg/16hours transdermal patches,P
+A,P,x4818041000033118,Nicorette invisi 25mg/16hours patches (McNeil Products Ltd),P
+A,P,x5401441000033115,Nicorette combi 15mg transdermal patches + 2mg medicated gum (McNeil Products Ltd),P
+A,P,x12591841000033113,Nicorette QuickMist 1mg/dose mouthspray cool berry (McNeil Products Ltd),P
+A,P,x6117741000033118,Nicorette QuickMist 1mg/dose mouthspray freshmint (McNeil Products Ltd),P
+A,P,x6117641000033110,Nicotine 1mg/dose oromucosal spray sugar free,P
+A,P,x6440641000033117,Nicotine 15mg inhalation cartridges with device,P
+A,P,x6440541000033118,Nicorette 15mg Inhalator (McNeil Products Ltd),P
+A,P,x8561241000033118,Nicotine 2.5mg orodispersible films sugar free,P
+A,P,x8561341000033111,NiQuitin Strips Mint 2.5mg oral films (Omega Pharma Ltd),P
+A,P,x10645741000033112,Nicorette Fruitfusion 6mg medicated chewing gum (McNeil Products Ltd),P
+A,P,x10645641000033115,Nicotine 6mg medicated chewing gum sugar free,P
+A,P,x2131841000033111,Bupropion 150mg modified-release tablets,P
+A,P,x2131941000033115,Zyban 150mg modified-release tablets (GlaxoSmithKline UK Ltd),P
+A,P,x1745841000033115,Nicotine 10mg/16hours transdermal patches,P
+A,P,x977841000033116,Nicorette 10mg patches (McNeil Products Ltd),P
+A,P,x4270341000033116,Boots NicAssist 10mg patches (The Boots Company Plc),P
+A,P,x4817841000033112,Nicorette invisi 10mg/16hours patches (McNeil Products Ltd),P
+A,P,x1745541000033117,Nicotine 14mg/24hours transdermal patches,P
+A,P,x2724341000033110,Boots Nicotine 14mg/24hours patches (The Boots Company Plc),P
+A,P,x973241000033112,Nicotinell TTS 20 patches (GlaxoSmithKline Consumer Healthcare),P
+A,P,x2729341000033114,NiQuitin Clear 14mg patches (Omega Pharma Ltd),P
+A,P,x1745241000033119,NiQuitin 14mg patches (Omega Pharma Ltd),P
+A,P,x4213441000033110,Nicopatch 14mg/24hours transdermal patches (Pierre Fabre Ltd),P
+A,P,x1745941000033111,Nicotine 15mg/16hours transdermal patches,P
+A,P,x977941000033112,Nicorette 15mg patches (McNeil Products Ltd),P
+A,P,x4270441000033110,Boots NicAssist 15mg patches (The Boots Company Plc),P
+A,P,x4817941000033116,Nicorette invisi 15mg/16hours patches (McNeil Products Ltd),P
