@@ -1,0 +1,44 @@
+code,term,type
+22068011,Pneumococcal vaccination,medcode
+454175013,Pneumococcal vaccination given,medcode
+1488400017,Booster pneumococcal vaccination,medcode
+452076012,Subcutaneous injection of Pneumovax II,medcode
+405301000000117,Second pneumococcal conjugated vaccination,medcode
+405281000000118,First pneumococcal conjugated vaccination,medcode
+509231000033119,Pneumovax 11,medcode
+405321000000114,Third pneumococcal conjugated vaccination,medcode
+226891000000115,Pneumococcal vaccination administration,medcode
+531731000033119,Pnu-Imune,medcode
+731231000033113,Prevenar,medcode
+858621000033118,Polyvalent Pneumococcal Vaccine,medcode
+924191000006111,Pneumococcal vaccination,medcode
+1010041000006113,Third pneumococcal conjugated vaccination,medcode
+1070101000006118,Adverse reaction to Pneumovax 11,medcode
+1083071000006113,Adverse reaction to Pnu-Imune,medcode
+1010021000006118,First pneumococcal conjugated vaccination,medcode
+1090251000006119,Adverse reaction to Prevenar,medcode
+1119851000006118,Adverse reaction to Polyvalent Pneumococcal Vaccine,medcode
+1116881000006118,Adverse reaction to Pneumococcal Polysaccharide vaccine,medcode
+1238331000033118,Prevenar 13 Vaccine,medcode
+1242031000033115,Synflorix,medcode
+1728341000006117,Adverse reaction to Prevenar 13 Vaccine,medcode
+1729291000006111,Adverse reaction to Synflorix,medcode
+1930831000006112,Adverse reaction to Sanofi Pasteur Msd Pneumococcal Polysaccharide,medcode
+2144231000033115,Sanofi Pasteur Msd Pneumococcal Polysaccharide,medcode
+2004811000006114,Adverse reaction to Pneumococcal Polysaccharide (Merck Sharp & Dohme),medcode
+2537295010,[X]Adverse reaction to pneumococcal vaccine,medcode
+980731000006113,[X]Pneumococcal vacc causing adverse effects therapeutic use,medcode
+11997981000006112,Adverse reaction to Pneumovax 23,medcode
+2415731000033117,Pneumovax 23,medcode
+2300431000033114,Pneumococcal Polysaccharide (Merck Sharp & Dohme),medcode
+762721000033115,Pneumococcal Polysaccharide vaccine,medcode
+9809541000033117,"Sanofi Pasteur Msd Pneumococcal Polysaccharide Vaccine, Solution For Injection 0.5 ml vial",prodcode
+2289341000033114,Prevenar vaccine suspension for injection 0.5ml vials (Wyeth Pharmaceuticals),prodcode
+12706141000033114,Pneumovax 23 solution for injection 0.5ml pre-filled syringes (Merck Sharp & Dohme Ltd),prodcode
+2182541000033114,Pneumovax II vaccine solution for injection 0.5ml pre-filled syringes (Merck Sharp & Dohme Ltd),prodcode
+11964841000033115,Pneumococcal polysaccharide vaccine solution for injection 0.5ml vials (Merck Sharp & Dohme Ltd),prodcode
+1094541000033112,Pnu-Imune vaccine solution for injection 0.5ml vials (Wyeth Pharmaceuticals),prodcode
+1094441000033111,Pneumovax II vaccine solution for injection 0.5ml vials (Merck Sharp & Dohme Ltd),prodcode
+3907141000033111,Prevenar vaccine suspension for injection 0.5ml pre-filled syringes (Pfizer Ltd),prodcode
+5411641000033116,Prevenar 13 vaccine suspension for injection 0.5ml pre-filled syringes (Pfizer Ltd),prodcode
+5438441000033118,Synflorix vaccine suspension for injection 0.5ml pre-filled syringes (GlaxoSmithKline UK Ltd),prodcode
