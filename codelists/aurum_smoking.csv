@@ -1,0 +1,195 @@
+MedCodeId,Term,Smoking status
+x216212011,Smoking reduced,Current
+x250372012,Trying to give up smoking,Current
+x99639019,Cigar smoker,Current
+x128130017,Smoker,Current
+x136515019,Pipe smoker,Current
+x108938018,Cigarette smoker,Current
+x854021000006115,Cigarette smoker,Current
+x78013015,Smokers' cough,Current
+x250368013,Keeps trying to stop smoking,Current
+x265092010,Pregnancy smoking advice,Current
+x923201000006112,Pregnancy smoking advice,Current
+x295258014,"Tobacco dependence, episodic",Current
+x285793015,Stop smoking monitor default,Current
+x338608011,Smoking cessation advice,Current
+x344795016,Pipe tobacco consumption,Current
+x459722017,Referral to stop-smoking clinic,Current
+x459524018,Over the counter nicotine replacement therapy,Current
+x457286014,Nicotine replacement therapy,Current
+x1488578010,Not interested in stopping smoking,Current
+x903981000006117,Not interested in stopping smoking,Current
+x503483019,Current smoker,Current
+x854071000006119,Current smoker,Current
+x1773560017,Smoking cessation programme start date,Current
+x1780273014,Seen by smoking cessation advisor,Current
+x1488577017,Ready to stop smoking,Current
+x904001000006111,Ready to stop smoking,Current
+x1488873010,Smoking free weeks,Current
+x1488576014,Thinking about stopping smoking,Current
+x904031000006115,Thinking about stopping smoking,Current
+x1484935015,Smoking status between 4 and 52 weeks,Current
+x1484936019,Smoking status at 52 weeks,Current
+x62881000000117,DNA - Did not attend smoking cessation clinic,Current
+x1484933010,Negotiated date for cessation of smoking,Current
+x1484937011,Nicotine replacement therapy provided free,Current
+x137711000006111,Smoker (Read codes),Current
+x1484934016,Smoking status at 4 weeks,Current
+x1780360012,Reason for restarting smoking,Current
+x1484932017,Smoking cessation milestones,Current
+x37311000006117,Other anti-smoking drug given,Current
+x1489355012,Referral to smoking cessation advisor,Current
+x2474719011,Minutes from waking to first tobacco consumption,Current
+x303501000000115,Smoking cessation advice provided by community pharmacist,Current
+x604961000006114,Current Smoker NOS,Current
+x492511000000117,Smoking cessation therapy,Current
+x2982426011,Provision of smoking cessation leaflet,Current
+x2669652019,Smoking started,Current
+x854961000006110,Grade B light smoker (1-10/day),Current
+x852111000006118,Gradual smoking reduction,Current
+x854981000006117,Grade C moderate smoker (11-20/day),Current
+x855001000006114,Grade D heavy smoker (>20 Day),Current
+x852131000006112,Smoking cessation-practice nurse support,Current
+x503483019,Current smoker,Current
+x854071000006119,Current smoker,Current
+x108938018,Cigarette smoker,Current
+x854021000006115,Cigarette smoker,Current
+x856371000006111,Smoking clinic,Current
+x1488578010,Not interested in stopping smoking,Current
+x903981000006117,Not interested in stopping smoking,Current
+x904021000006118,Previous smoking quit attempts,Current
+x1488576014,Thinking about stopping smoking,Current
+x904031000006115,Thinking about stopping smoking,Current
+x904121000006117,Carbon monoxide validation confirms smoker,Current
+x1488577017,Ready to stop smoking,Current
+x904001000006111,Ready to stop smoking,Current
+x904181000006118,Smoking cessation counselling,Current
+x904011000006114,Smoking cessation declaration signed by patient,Current
+x904201000006117,Smoking cessation confidence score,Current
+x265092010,Pregnancy smoking advice,Current
+x923201000006112,Pregnancy smoking advice,Current
+x961581000006114,Smokes/uses tobacco products,Current
+x904241000006115,Smoking cessation counselling in person,Current
+x1152111000000118,Current smoker annual review,Current
+x1563081000000115,Practice based smoking cessation programme start date,Current
+x1176421000000118,Smoking cessation advice declined,Current
+x1592611000000110,Failed attempt to stop smoking,Current
+x1591651000006110,Smoking cessation referral declined,Current
+x1672841000006118,Fagerstrom test for nicotine dependence,Current
+x408878014,Fagerstrom test for nicotine dependence,Current
+x1777011000006118,Reason for referral: Smoking Cessation,Current
+x1899551000006112,Mother's smoking status at time of baby's birth - smoker,Current
+x1889681000006118,Child 27-30 mth exam.- signpost to smoking cessation,Current
+x1889701000006115,Child 27-30 mth exam. - requ. assist. from smoking cessation,Current
+x1889671000006116,Child 27-30 mth exam.- smoking cessation support provided,Current
+x1889711000006117,Child 27-30 mth exam. - refused smoking cessation service,Current
+x1973851000006114,"Mental & behav dis due to use tobacco: acute intoxication, with other medical complications",Current
+x1974741000006119,"Mental & behav dis due to use tobacco: psychotic disorder, predominantly polymorphic",Current
+x1974401000006114,"Mental and behav dis due to use tobacco: dependence syndr, currently using the substance [active dependence]",Current
+x1974421000006116,"Mental and behav dis due to use tobacco: dependence syndr, continuous use",Current
+x1974811000006110,"Mental & behav dis due to use tobacco: psychotic disorder, mixed",Current
+x1974341000006115,"Mental and behav dis due to use tobacco: dependence syndr, currently on a clinically supervised maintenance or replacement regime [controlled dependence]",Current
+x1974501000006110,"Mental and behav dis due to use tobacco: withdrawal state, uncomplicated",Current
+x1974531000006119,"Mental and behav dis due to use tobacco: withdrawal state, with convulsions",Current
+x1974791000006111,"Mental & behav dis due to use tobacco: psychotic disorder, predominantly manic symptoms",Current
+x1974911000006115,"Mental & behav dis due to tobacco: resid & late-onset psychot dis, residual affective disorder",Current
+x1973951000006117,"Mental & behav dis due to use tobacco: acute intoxication, with perceptual distortions",Current
+x1974581000006118,"Mental & behav dis due to tobacco: withdrawl state wth delirium, with convulsions",Current
+x1974841000006114,"Mental & behav dis due to tobacco: resid & late-onset psychot dis, flashbacks",Current
+x1974931000006114,"Mental & behav dis due to tobacco: resid & late-onset psychot dis, dementia",Current
+x1973821000006117,"Mental & behav dis due to use tobacco: acute intoxication, uncomplicated",Current
+x1973981000006113,"Mental & behav dis due to use tobacco: acute intoxication, with coma",Current
+x1974461000006110,"Mental and behav dis due to use tobacco: dependence syndr, episodic use [dipsomania]",Current
+x1974681000006119,"Mental & behav dis due to use tobacco: psychotic disorder, predominantly delusional",Current
+x1974031000006110,"Mental & behav dis due to use tobacco: acute intoxication, with convulsions",Current
+x1974571000006116,"Mental & behav dis due to tobacco: withdrawl state wth delirium, without convulsions",Current
+x1974871000006118,"Mental & behav dis due to tobacco: resid & late-onset psychot dis, personality or behaviour disorder",Current
+x1974961000006117,"Mental & behav dis due to tobacco: resid & late-onset psychot dis, other persisting cognitive impairment",Current
+x1974981000006110,"Mental & behav dis due to tobacco: resid & late-onset psychot dis, late-onset psychotic disorder",Current
+x1973841000006112,"Mental & behav dis due to use tobacco: acute intoxication, with trauma or other bodily injury",Current
+x1973921000006114,"Mental & behav dis due to use tobacco: acute intoxication, with delirium",Current
+x1974311000006119,"Mental and behav dis due to use tobacco: dependence syndr, currently abstinent, but in a protected environment",Current
+x1974651000006110,"Mental & behav dis due to use tobacco: psychotic disorder, schizophrenia-like",Current
+x1974761000006115,"Mental & behav dis due to use tobacco: psychotic disorder, predominantly depressive symptoms",Current
+x2141561000000115,Smoking cessation drug therapy declined,Current
+x2462431000000110,Varenicline smoking cessation therapy offered,Current
+x1819411000006114,Smoking increased,Current
+x2462391000000119,Varenicline smoking cessation therapy declined,Current
+x295951010,[X]Mental and behavioural disorder due to use of tobacco,Current
+x295256013,"Tobacco dependence, unspecified",Current
+x295260011,Tobacco dependence NOS,Current
+x461114016,[V]Tobacco abuse counselling,Current
+x2670126018,Smoking restarted,Current
+x137791000006118,Smoking restarted,Current
+x102951000006115,Tobacco dependence,Current
+x137721000006115,Smoker - amount smoked,Current
+x102921000006112,Tobacco consumption,Current
+x88471000006112,Trivial smoker - < 1 cig/day,Current
+x397981000006119,[X]Mental and behav dis due to use tobacco: dependence syndr,Current
+x700121000006118,Moderate smoker - 10-19 cigs/d,Current
+x743331000006116,Light smoker - 1-9 cigs/day,Current
+x1715591000006117,Referral to NHS stop smoking service,Current
+x819331000006110,Heavy smoker - 20-39 cigs/day,Current
+x67621000006112,Very heavy smoker - 40+cigs/d,Current
+x397181000006117,[X]Men & beh dis due tobacco: resid & late-onset psychot dis,Current
+x397991000006116,[X]Mental and behav dis due to use tobacco: withdrawal state,Current
+x397461000006119,[X]Ment & behav dis due use tobacco: unsp ment & behav dis,Current
+x397911000006114,[X]Mental and behav dis due to use of tobacco: harmful use,Current
+x397271000006110,[X]Men & behav dis due to use tobacco: oth men & behav dis,Current
+x397681000006110,[X]Mental & behav dis due to use tobacco: psychotic disorder,Current
+x397733018,Occasional smoker,Current
+x1714541000006110,Current smoker annual review - enhanced services admin,Current
+x397281000006113,[X]Men & behav dis due tobacco: withdrawl state wth delirium,Current
+x397671000006112,[X]Mental & behav dis due to use tobacco: acute intoxication,Current
+x460828018,[V]Tobacco use,Current
+x1672841000006118,Fagerstrom test for nicotine dependence,Current
+x408878014,Fagerstrom test for nicotine dependence,Current
+x397971000006117,[X]Mental and behav dis due to use tobacco: amnesic syndrome,Current
+x1709641000000115,Referral for smoking cessation service offered,Current
+x2251911000000114,Referral to smoking cessation service,Current
+x2717211000000112,Signposting to smoking cessation service,Current
+x250367015,Ex-very heavy smoker (40+/day),Current
+x2670126018,Smoking restarted,Current
+x137791000006118,Smoking restarted,Current
+x2251871000000112,Referral to smoking cessation service declined,Current
+x1125741000000111,Brief intervention for smoking cessation,Current
+x1974711000006118,"Mental & behav dis due to use tobacco: psychotic disorder, predominantly hallucinatory",Current
+x295257016,"Tobacco dependence, continuous",Current
+x904191000006115,Smoking cessation motivation score,Current
+x1175011000000112,Smoking cessation programme declined,Current
+x1974371000006111,"Mental and behav dis due to use tobacco: dependence syndr, currently abstinent, but receiving treatment with aversive or blocking drugs",Current
+x459484017,Nicotine replacement therapy refused,Current
+x250385010,Date ceased smoking,Ex
+x250373019,Stopped smoking,Ex
+x295259018,Tobacco dependence in remission,Ex
+x418914010,Ex-cigarette smoker,Ex
+x137761000006114,Smoking Age Ceased,Ex
+x649851000006112,Ex- Rolled Tobacco Smoker,Ex
+x649861000006114,Ex-Cigarette Smoker,Ex
+x852121000006114,Smoking cessation-maintain abstinence,Ex
+x852991000006114,Ex-cigar smoker,Ex
+x853001000006110,Ex-smoker NOS,Ex
+x854051000006112,Ex-pipe smoker,Ex
+x854111000006110,Past smoker,Ex
+x854151000006111,Date stopped smoking,Ex
+x903041000006110,EX-Smoker NOS,Ex
+x1059701000000119,Ex roll-up cigarette smoker,Ex
+x1151791000000117,Recently stopped smoking,Ex
+x1899561000006114,Mother's smoking status at time of baby's birth - ex-smoker,Ex
+x250365011,Ex-moderate smoker (10-19/day),Ex
+x250366012,Ex-heavy smoker (20-39/day),Ex
+x250364010,Ex-light smoker (1-9/day),Ex
+x250371017,Ex-smoker - amount unknown,Ex
+x250363016,Ex-trivial smoker (<1/day),Ex
+x1974281000006116,"Mental and behav dis due to use tobacco: dependence syndr, currently abstinent",Ex
+x649831000006117,Ex pipe smoker,Ex
+x649821000006115,Ex cigar smoker,Ex
+x1123951000000110,Ex-smoker annual review - enhanced services administration,Ex
+x649841000006110,Ex smoker,Ex
+x1154471000000114,Ex-smoker annual review,Ex
+x14866014,Non-smoker,Never
+x250374013,Current non-smoker,Never
+x397732011,Never smoked tobacco,Never
+x854951000006113,Grade A non-smoker,Never
+x1009271000006118,Non Smoker - Nos,Never
+x1899581000006116,Mother's smoking status at time of baby's birth - never smoked,Never
