@@ -3,20 +3,19 @@ library(data.table)
 #  lexis expansion function
 #  ........................
 
-lexis <- function(data, id, start_date, end_date, time_varying, dob, event, age_groups = 0:20 * 5, ng = 50) {
+lexis <- function(data, id = 'id', start_date = 'entry', end_date = 'exit', baseline = 'exposure_baseline', opioids = 'becomes_exposed', dob = 'dob', event = 'death_date', age_groups = 0:20 * 5, ng = 50) {
   nr <- seq_len(nrow(data))
   ind <- findInterval(nr, quantile(nr, 0:(ng-1)/ng))
   x <- split(data, ind)
   l <- lapply(seq_along(x), function(y) {
-    t0 <- proc.time()
-    days <- x[[y]][, .(day = seq.int(from = get(start_date), to = get(end_date))), c(id, dob, event, time_varying)]
-    names(days) <- c('id', 'dob', 'event_date', 'time_varying', 'day')
+    days <- x[[y]][, .(day = seq.int(from = get(start_date), to = get(end_date))), c(id, dob, event, opioids, baseline)]
+    names(days) <- c('id', 'dob', 'death_date', 'opioids', 'exposure', 'day')
     days[, age := (day - dob) / 365.25]
     days[, age_group := findInterval(age, age_groups)]
-    days[, tv := !is.na(time_varying) & day >= time_varying]
-    days[, event := event_date == day & !is.na(event_date)]
+    days[, opioids := exposure == 1 | (!is.na(opioids) & day >= opioids)]
+    days[, event := death_date == day & !is.na(death_date)]
     print(paste0(y, '/', ng))
-    days[, .(follow_up = .N, event = any(event)), c('id', 'age_group', 'tv')]
+    days[, .(follow_up = .N, event = any(event)), c('id', 'age_group', 'opioids')]
   })
   rbindlist(l)
 }
@@ -24,33 +23,66 @@ lexis <- function(data, id, start_date, end_date, time_varying, dob, event, age_
 #  generate example data
 #  .....................
 
-study_start <- as.integer(as.Date('1980-01-01'))
-study_end <- as.integer(as.Date('2020-12-31'))
-earliest_dob <- as.integer(as.Date('1950-01-01'))
-latest_dob <- as.integer(as.Date('1970-12-31'))
-study_duration <- study_end - study_start
-event_probability <- 0.1
-time_varying_probability <- 0.3
-n <- 1e5
+# inputs
 
-set.seed(33)
-dat <- data.table(id = seq_len(n), 
+study_start <- as.integer(as.Date('1998-01-01'))
+study_end <- as.integer(as.Date('2018-10-30'))
+earliest_dob <- as.integer(as.Date('1960-01-01'))
+latest_dob <- as.integer(as.Date('1995-12-31'))
+youngest_entrant <- as.integer(18 * 365.25)
+study_duration <- study_end - study_start
+opioid_mortality_ratio <- 10
+proportion_comparison_become_exposed <- 0.03
+number_opioids <- 1e4
+ratio <- 3
+
+# make data
+
+set.seed(31)
+n <- number_opioids * (ratio + 1)
+dat <- data.table(id = seq_len(n),
+                  exposure_baseline = rep(1:0, c(number_opioids, number_opioids * ratio)),
                   entry = sample(study_start:study_end, n, replace = T),
                   follow_up = sample(seq_len(study_duration), n, replace = T),
-                  event = rbinom(n, 1, event_probability),
                   dob = sample(earliest_dob:latest_dob, n, replace = T),
-                  time_varying = rbinom(n, 1, time_varying_probability))
-dat[, exit := entry + follow_up]
-dat[, exit := pmin(exit, study_end)]
+                  becomes_exposed = rbinom(n, 1, proportion_comparison_become_exposed))
+dat[, entry := pmax(entry, dob + youngest_entrant)]
+dat[, exit := pmin(entry + follow_up, study_end)]
 dat[, follow_up := exit - entry]
-dat[, event_date := (entry + floor(runif(n) * follow_up)) * event]
-dat$event_date[dat$event_date == 0] <- NA_integer_
-dat[, exit := pmin(exit, event_date, na.rm = T)]
+dat[, age_entry := (entry - dob)/365.25]
+dat[, death_risk := (age_entry^3)/5e6]
+dat[, death_risk := death_risk * c(1, opioid_mortality_ratio)[exposure_baseline + 1]]
+dat[, death := rbinom(n, 1, death_risk)]
+dat[, death_date := (entry + as.integer(runif(n) * follow_up)) * death]
+dat$death_date[dat$death_date == 0] <- NA_integer_
+dat[, exit := pmin(exit, death_date, na.rm = T)]
 dat[, follow_up := exit - entry]
-dat[, time_varying := (entry + floor(runif(n) * follow_up)) * time_varying]
-dat$time_varying[dat$time_varying == 0] <- NA_integer_
+dat[, becomes_exposed := (entry + as.integer(runif(n) * follow_up)) * becomes_exposed]
+dat$becomes_exposed[dat$becomes_exposed == 0 | dat$exposure_baseline == 1] <- NA_integer_
 
 #  create lexis-expanded data
 #  ..........................
 
-lexis_data <- lexis(dat, id = 'id', start_date = 'entry', end_date = 'exit', event = 'event_date', time_varying = 'time_varying', dob = 'dob')
+age_lims <- 0:10 * 10
+lexis_data <- lexis(dat, id = 'id', start_date = 'entry', end_date = 'exit', baseline = 'exposure_baseline', opioids = 'becomes_exposed', dob = 'dob', event = 'death_date', age_groups = age_lims)
+
+# check total follow-up duration (should be TRUE)
+
+dat[, sum(exit - entry + 1)] == lexis_data[, sum(follow_up)]
+
+#  smr calculation
+#  ...............
+
+smr <- lexis_data[, .(person_years = sum(follow_up)/365.25, deaths = sum(event)), c('age_group', 'opioids')]
+ref <- smr[opioids == F]
+ref[, ref_rate := deaths / person_years]
+smr <- ref[, c('age_group', 'ref_rate')][smr[opioids == T, -'opioids'], on = 'age_group']
+smr[, expected := ref_rate * person_years]
+smr[, .(observed = sum(deaths), expected = sum(expected), smr = sum(deaths) / sum(expected))]
+
+#  poisson model
+#  .............
+
+lexis_data[, age_group := factor(age_group, seq_along(age_lims), age_lims)]
+model <- glm(event ~ opioids + age_group + offset(log(follow_up)), data = lexis_data, family = 'poisson')
+exp(cbind(coef(model), confint(model)))[-1,]
