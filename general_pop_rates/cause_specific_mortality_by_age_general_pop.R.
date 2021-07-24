@@ -1,0 +1,55 @@
+# source:
+# https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/adhocs/13123deathsbyagesexandselectedunderlyingcausespeopleaged15to79yearsenglandwalesandusualresidentsoflondondeathsregisteredin2001to2019
+# Deaths by age, sex, and selected underlying causes, people aged 15 to 79 years, England & Wales and usual residents of London, deaths registered in 2001 to 2019
+
+library(data.table)
+library(devEMF)
+
+d <- read.csv(url("https://raw.githubusercontent.com/danlewer/hupio/main/general_pop_rates/ons_cause_specific_deaths.csv"), header = T)
+names(d) <- c('sex', 'year', 'cause', 15:79)
+setDT(d)
+d <- melt(d, id.vars = c('sex', 'year', 'cause'), variable.name = 'age', variable.factor = F, value.name = 'deaths')
+d[, age := as.integer(age)]
+
+# add suicides and drug poisonings
+
+ex <- c('Accidental poisoning by and exposure to noxious substances', 'Intentional self-harm', 'Intentional self-poisoning by drugs, medicaments and biological substances', 'Poisoning by drugs, medicaments and biological substances, undetermined intent')
+ex <- d[cause %in% ex, .(cause = 'external', deaths = sum(deaths)), c('sex', 'year', 'age')]
+d <- rbind(d, ex)
+
+# population
+
+p <- read.csv(url("https://raw.githubusercontent.com/danlewer/hupio/main/general_pop_rates/nomis_population_estimates2.csv"), header = T)
+names(p) <- c('age', 'sex', 1991:2020)
+setDT(p)
+p <- melt(p, id.vars = c('age', 'sex'), variable.name = 'year', variable.factor = F, value.name = 'pop')
+
+# age-specific rates, 2010-2019
+
+yr <- 2010:2019
+ar <- p[year %in% yr, .(pop = sum(pop)), c('age')][d[year %in% yr, .(deaths = sum(deaths)), c('age', 'cause')]
+, on = 'age']
+ar[, r := deaths / pop * 100000]
+
+# plot
+
+causes <- c('All causes', 'II: Neoplasms', 'IX: Diseases of the circulatory system', 'X: Diseases of the respiratory system', 'Diseases of liver', 'external')
+titles <- c('All cause', 'Cancers', 'Circulatory diseases', 'Respiratory diseases', 'Liver disease', 'Suicides and drug poisoning')
+
+emf('cause_specific_mortality_rates_in_population_12july2021.emf', height = 4.5, width = 7, family = 'Corbel')
+
+par(mfrow = c(2, 3), mar = c(3, 3, 0, 0), oma = c(2.5, 2.5, 0, 0))
+for (i in seq_along(causes)) {
+  pd <- ar[cause == causes[i]]
+  ymax <- max(pd[, r])
+  plot(1, type = 'n', xlim = c(15, 79), ylim = c(0, ymax * 1.2), xlab = NA, ylab = NA, axes = F)
+  with(pd, lines(age, r))
+  text(47.5, ymax * 1.1, titles[i])
+  rect(15, 0, 79, ymax * 1.2)
+  axis(2, las = 2, pos = 15)
+  axis(1, seq(20, 70, 10), pos = 0)
+}
+mtext('Mortality rate per 100,000', side = 2, outer = T, line = 1, cex = 0.7)
+mtext('Age', side = 1, outer = T, line = 1, cex = 0.7)
+
+dev.off()
