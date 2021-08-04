@@ -1,45 +1,45 @@
-metadata,category,readcode,readterm,medcode
-Name: heroincrack_copd,1,H32..00,Emphysema,794
-Version: 1,1,H3...11,Chronic obstructive airways disease,998
-Source: CPRD,1,H3...00,Chronic obstructive pulmonary disease,1001
-Author: Dan Lewer (code list from Jenni Quint),1,663K.00,Airways obstructn irreversible,4084
-Date: 29 Jan 2020,1,H3z..00,Chronic obstructive airways disease NOS,5710
-Categories:,1,66YB.00,Chronic obstructive pulmonary disease monitoring,9520
-1. copd,1,H38..00,Severe chronic obstructive pulmonary disease,9876
-,1,H37..00,Moderate chronic obstructive pulmonary disease,10802
-,1,H36..00,Mild chronic obstructive pulmonary disease,10863
-,1,H322.00,Centrilobular emphysema,10980
-,1,66YM.00,Chronic obstructive pulmonary disease annual review,11287
-,1,H3y..00,Other specified chronic obstructive airways disease,12166
-,1,H312100,Emphysematous bronchitis,14798
-,1,H32yz00,Other emphysema NOS,16410
-,1,66YL.11,COPD follow-up,18476
-,1,66YL.00,Chronic obstructive pulmonary disease follow-up,18621
-,1,9Oi..00,Chronic obstructive pulmonary disease monitoring admin,18792
-,1,H320z00,Chronic bullous emphysema NOS,23492
-,1,66YS.00,Chronic obstructive pulmonary disease monitoring by nurse,26018
-,1,H320.00,Chronic bullous emphysema,26306
-,1,9Oi0.00,Chronic obstructive pulmonary disease monitoring 1st letter,28755
-,1,H32z.00,Emphysema NOS,33450
-,1,9Oi1.00,Chronic obstructive pulmonary disease monitoring 2nd letter,34202
-,1,9Oi2.00,Chronic obstructive pulmonary disease monitoring 3rd letter,34215
-,1,H3z..11,Chronic obstructive pulmonary disease NOS,37247
-,1,66YD.00,Chronic obstructive pulmonary disease monitoring due,37371
-,1,9Oi4.00,Chronic obstructive pulmonary disease monitor phone invite,38074
-,1,9Oi3.00,Chronic obstructive pulmonary disease monitoring verb invite,42258
-,1,679V.00,Health education - chronic obstructive pulmonary disease,42313
-,1,H312z00,Obstructive chronic bronchitis NOS,44525
-,1,66Yg.00,Chronic obstructive pulmonary disease disturbs sleep,45770
-,1,66Yh.00,Chronic obstructive pulmonary disease does not disturb sleep,45771
-,1,8CR1.00,Chronic obstructive pulmonary disease clini management plan,45777
-,1,66YT.00,Chronic obstructive pulmonary disease monitoring by doctor,45998
-,1,H321.00,Panlobular emphysema,46578
-,1,H320200,Giant bullous emphysema,60188
-,1,Hyu3100,[X]Other specified chronic obstructive pulmonary disease,65733
-,1,H3y..11,Other specified chronic obstructive pulmonary disease,67040
-,1,H39..00,Very severe chronic obstructive pulmonary disease,93568
-,1,H3A..00,End stage chronic obstructive airways disease,104608
-,1,9NgP.11,On COPD (chr obstruc pulmonary disease) supportv cre pathway,104710
-,1,9NgP.00,On chronic obstructive pulmonary disease supprtv cre pathway,104985
-,1,8CMW500,Chronic obstructive pulmonary disease care pathway,105457
-,1,9Nk7000,Seen in chronic obstructive pulmonary disease clinic,106637
+readcode,readterm,medcode,emphysema_chronic_bronchitis
+H32..00,Emphysema,794,emphysema
+H3...11,Chronic obstructive airways disease,998,unspecified
+H3...00,Chronic obstructive pulmonary disease,1001,unspecified
+663K.00,Airways obstructn irreversible,4084,unspecified
+H3z..00,Chronic obstructive airways disease NOS,5710,unspecified
+66YB.00,Chronic obstructive pulmonary disease monitoring,9520,unspecified
+H38..00,Severe chronic obstructive pulmonary disease,9876,unspecified
+H37..00,Moderate chronic obstructive pulmonary disease,10802,unspecified
+H36..00,Mild chronic obstructive pulmonary disease,10863,unspecified
+H322.00,Centrilobular emphysema,10980,emphysema
+66YM.00,Chronic obstructive pulmonary disease annual review,11287,unspecified
+H3y..00,Other specified chronic obstructive airways disease,12166,unspecified
+H312100,Emphysematous bronchitis,14798,unspecified
+H32yz00,Other emphysema NOS,16410,emphysema
+66YL.11,COPD follow-up,18476,unspecified
+66YL.00,Chronic obstructive pulmonary disease follow-up,18621,unspecified
+9Oi..00,Chronic obstructive pulmonary disease monitoring admin,18792,unspecified
+H320z00,Chronic bullous emphysema NOS,23492,emphysema
+66YS.00,Chronic obstructive pulmonary disease monitoring by nurse,26018,unspecified
+H320.00,Chronic bullous emphysema,26306,emphysema
+9Oi0.00,Chronic obstructive pulmonary disease monitoring 1st letter,28755,unspecified
+H32z.00,Emphysema NOS,33450,emphysema
+9Oi1.00,Chronic obstructive pulmonary disease monitoring 2nd letter,34202,unspecified
+9Oi2.00,Chronic obstructive pulmonary disease monitoring 3rd letter,34215,unspecified
+H3z..11,Chronic obstructive pulmonary disease NOS,37247,unspecified
+66YD.00,Chronic obstructive pulmonary disease monitoring due,37371,unspecified
+9Oi4.00,Chronic obstructive pulmonary disease monitor phone invite,38074,unspecified
+9Oi3.00,Chronic obstructive pulmonary disease monitoring verb invite,42258,unspecified
+679V.00,Health education - chronic obstructive pulmonary disease,42313,unspecified
+H312z00,Obstructive chronic bronchitis NOS,44525,chronic_bronchitis
+66Yg.00,Chronic obstructive pulmonary disease disturbs sleep,45770,unspecified
+66Yh.00,Chronic obstructive pulmonary disease does not disturb sleep,45771,unspecified
+8CR1.00,Chronic obstructive pulmonary disease clini management plan,45777,unspecified
+66YT.00,Chronic obstructive pulmonary disease monitoring by doctor,45998,unspecified
+H321.00,Panlobular emphysema,46578,emphysema
+H320200,Giant bullous emphysema,60188,emphysema
+Hyu3100,[X]Other specified chronic obstructive pulmonary disease,65733,unspecified
+H3y..11,Other specified chronic obstructive pulmonary disease,67040,unspecified
+H39..00,Very severe chronic obstructive pulmonary disease,93568,unspecified
+H3A..00,End stage chronic obstructive airways disease,104608,unspecified
+9NgP.11,On COPD (chr obstruc pulmonary disease) supportv cre pathway,104710,unspecified
+9NgP.00,On chronic obstructive pulmonary disease supprtv cre pathway,104985,unspecified
+8CMW500,Chronic obstructive pulmonary disease care pathway,105457,unspecified
+9Nk7000,Seen in chronic obstructive pulmonary disease clinic,106637,unspecified
