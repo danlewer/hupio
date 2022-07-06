@@ -3,7 +3,7 @@ library(devEMF)
 library(stringi)
 library(RColorBrewer)
 
-d <- read.csv(url('https://raw.githubusercontent.com/danlewer/hupio/main/copd/copd_treatment_adverse_outcomes_30sept2021.csv'))
+d <- read.csv(url('https://raw.githubusercontent.com/danlewer/hupio/main/copd/copd_treatment_adverse_outcomes.csv'))
 setDT(d)
 d[, label := factor(outcome, c('dod_resp', 'dod_all', 'resp_hosp', 'ae_hosp', 'sc', 'meds', 'pulm_rehab', 'pnu', 'flu'),
                     c('Death with underlying respiratory cause',
