@@ -72,6 +72,7 @@ pf <- function (pd1, pd2, heads = c('Unadjusted HR\n(95% CI)', 'Adjusted HR\n(95
   
 }
 
+
 cairo_pdf('Fig2_v2.pdf', height = 6, width = 11, family = 'Franklin Gothic Book')
 
 par(mar = c(4, 0, 4, 0))
@@ -82,7 +83,7 @@ pf(pd1 = unadj[sens == 'no'], pd2 = adj[sens == 'no'])
 
 dev.off()
 
-emf('sensitivity_current_smokers.emf', height = 5, width = 9, family = 'Corbel')
+emf('sensitivity_current_smokers.emf', height = 6, width = 11, family = 'Franklin Gothic Book')
 
 pf(pd1 = adj[sens == 'no'], pd2 = adj[sens == 'yes'], heads = c('Main\nanalysis', 'Restricted to\ncurrent smokers'))
 
