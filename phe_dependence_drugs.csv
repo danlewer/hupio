@@ -1,0 +1,67 @@
+class,bnf,drugs
+Opioids,4.7.2,Buprenorphine
+Opioids,4.7.2,Codeine
+Opioids,4.7.2,Dextromoramide
+Opioids,4.7.2,Diamorphine
+Opioids,4.7.2,Dihydrocodeine
+Opioids,4.7.2,Dipipanone
+Opioids,4.7.2,Fentanyl
+Opioids,4.7.2,Hydromorphone
+Opioids,4.7.2,Meptazinol
+Opioids,4.7.2,Methadone
+Opioids,4.7.2,Morphine
+Opioids,4.7.2,Oxycodone
+Opioids,4.7.2,Papaveretum
+Opioids,4.7.2,Pentazocine
+Opioids,4.7.2,Pethidine
+Opioids,4.7.2,Tapentadol
+Opioids,4.7.2,Tramadol
+Opioids,4.7.1,Co-codamol
+Opioids,4.7.1,Co-dydramol
+Z-drugs,4.1.1,Zaleplon
+Z-drugs,4.1.1,Zopiclone
+Z-drugs,4.1.1,Zolpidem
+Benzodiazepines,4.1.1 (insomnia),Flurazepam
+Benzodiazepines,4.1.1 (insomnia),Loprazolam
+Benzodiazepines,4.1.1 (insomnia),Lormetazepam
+Benzodiazepines,4.1.1 (insomnia),Nitrazepam
+Benzodiazepines,4.1.1 (insomnia),Temazepam
+Benzodiazepines,4.1.2 (anxiety),Diazepam
+Benzodiazepines,4.1.2 (anxiety),Chlordiazepoxide
+Benzodiazepines,4.1.2 (anxiety),Lorazepam
+Benzodiazepines,4.1.2 (anxiety),Oxazepam
+Gabapentinoids,4.8.1,Gabapentin
+Gabapentinoids,4.8.1,Pregabalin
+Antidepressants,4.3.1 (Tricyclics),Amitriptyline
+Antidepressants,4.3.1 (Tricyclics),Amoxapine
+Antidepressants,4.3.1 (Tricyclics),Clomipramine
+Antidepressants,4.3.1 (Tricyclics),Dosulepin
+Antidepressants,4.3.1 (Tricyclics),Doxepin
+Antidepressants,4.3.1 (Tricyclics),Imipramine
+Antidepressants,4.3.1 (Tricyclics),Lofepramine
+Antidepressants,4.3.1 (Tricyclics),Maprotiline
+Antidepressants,4.3.1 (Tricyclics),Mianserin
+Antidepressants,4.3.1 (Tricyclics),Nortriptyline
+Antidepressants,4.3.1 (Tricyclics),Protriptyline
+Antidepressants,4.3.1 (Tricyclics),Trazodone
+Antidepressants,4.3.1 (Tricyclics),Trimipramine
+Antidepressants,4.3.2 (MAOIs),Isocarboxazid
+Antidepressants,4.3.2 (MAOIs),Moclobemide
+Antidepressants,4.3.2 (MAOIs),Phenelzine
+Antidepressants,4.3.2 (MAOIs),Tranylcypromine
+Antidepressants,4.3.3 (SSRIs),Citalopram
+Antidepressants,4.3.3 (SSRIs),Escitalopram
+Antidepressants,4.3.3 (SSRIs),Fluoxetine
+Antidepressants,4.3.3 (SSRIs),Fluvoxamine
+Antidepressants,4.3.3 (SSRIs),Paroxetine
+Antidepressants,4.3.3 (SSRIs),Sertraline
+Antidepressants,4.3.4 (Other antidepressants),Agomelatine
+Antidepressants,4.3.4 (Other antidepressants),Duloxetine
+Antidepressants,4.3.4 (Other antidepressants),Flupentixol
+Antidepressants,4.3.4 (Other antidepressants),Mirtazapine
+Antidepressants,4.3.4 (Other antidepressants),Nefazodone
+Antidepressants,4.3.4 (Other antidepressants),Oxitriptan
+Antidepressants,4.3.4 (Other antidepressants),Reboxetine
+Antidepressants,4.3.4 (Other antidepressants),Tryptophan
+Antidepressants,4.3.4 (Other antidepressants),Venlafaxine
+Antidepressants,4.3.4 (Other antidepressants),Vortioxetine
