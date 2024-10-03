@@ -1,7 +1,7 @@
 options(scipen = 999)
 
 # ===============================
-# libraries and general functions 
+# libraries and general functions
 # -------------------------------
 
 library(data.table)
@@ -17,7 +17,7 @@ roundup <- function (x, dig = 2) {
   r * 10 ^ (l-dig)
 }
 
-yax <- function(x, tickabove = F, ntick = 5) {
+yax <- function (x, tickabove = F, ntick = 5) { # make y-axis
   l <- c(c(1, 2, 4, 5, 25) %o% 10^(0:8))
   d <- l[which.min(abs(x/ntick - l))]
   d <- 0:(ntick+1) * d
@@ -26,7 +26,45 @@ yax <- function(x, tickabove = F, ntick = 5) {
   d[seq_len(i)]
 }
 
-add.alpha <- function(cols, alpha) rgb(t(col2rgb(cols)/255), alpha = alpha)
+add.alpha <- function (cols, alpha) rgb(t(col2rgb(cols)/255), alpha = alpha)
+
+# all-cause life table
+
+life.table <- function (mx, cohort = 100000, EX = T) { # if EX is true, just return life expectancy
+  n <- length(mx) + 1
+  qx <- 2 * mx / (2 + mx)
+  qx <- c(qx, 1) # forced method - mortality rate max age + 1 is 100%
+  lx <- c(1, cumprod(1 - qx)) * cohort
+  dx <- -c(diff(lx), lx[n] * qx[n])
+  t <- (lx + c(lx[-1], 0)) / 2
+  Tx <- rev(cumsum(rev(t)))
+  ex <- Tx / lx
+  lt <- data.frame(lx = lx, dx = dx, t = t, Tx = Tx, ex = ex)[1:n,]
+  if (EX) ex[1] else lt
+}
+
+# cause-specific life table function
+# this works by creating a life table based on the all-cause mortality rates
+# it then applies the proportions of deaths at each age
+# the 'mat' argument is a matrix of cause-specific mortality rates
+
+cs.life.table <- function (mat, cohort = 100000) {
+  # all-cause life table
+  mx <- rowSums(mat)
+  n <- length(mx) + 1
+  qx <- 2 * mx / (2 + mx)
+  qx <- c(qx, 1) # forced method - mortality rate max age + 1 is 100%
+  lx <- c(1, cumprod(1 - qx)) * cohort
+  dx <- -c(diff(lx), lx[n] * qx[n])
+  # make life table data frame
+  lt <- data.frame(lx = lx, dx = dx)[1:n,]
+  # matrix of proportions of deaths by cause at each age
+  cm <- rbind(mat, 1) / rowSums(rbind(mat, 1))
+  cs.dx <- lt$dx * cm
+  colnames(cs.dx) <- paste0('dx_', colnames(mat))
+  # outputs
+  cbind(lt, cs.dx)[-nrow(lt),]
+}
 
 # ==============================
 # read data and aggregate by sex
@@ -36,7 +74,6 @@ add.alpha <- function(cols, alpha) rgb(t(col2rgb(cols)/255), alpha = alpha)
 # Codelist: https://wellcomeopenresearch.org/articles/5-282
 # Causes of death: https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(21)00254-1/fulltext
 
-#m <- fread('hupio_rates_drugs_vs_smoking_25aug2023.csv', drop = 'gender', col.names = c('opioids', 'age', 'smoking', 'cvd', 'other_cancers', 'drug_related', 'hep', 'other', 'follow_up', 'all_cause'))
 m <- fread("https://raw.githubusercontent.com/danlewer/hupio/main/mortality/single-year-of-age-rates/hupio_rates_drugs_vs_smoking_25aug2023.csv", drop = 'gender', col.names = c('opioids', 'age', 'smoking', 'cvd', 'other_cancers', 'drug_related', 'hep', 'other', 'follow_up', 'all_cause'))
 m <- m[opioids == T & age <= 70, lapply(.SD, sum), by = 'age'][, -'opioids']
 
@@ -129,53 +166,9 @@ text(79, ys, titles[order(final_vals)], adj = 0)
 
 dev.off()
 
-# ==================================
-# functions for life table modelling
-# ----------------------------------
-
-# all-cause life table
-
-life.table <- function(mx, cohort = 100000, EX = T) { # if EX is true, just return life expectancy
-  n <- length(mx) + 1
-  qx <- 2 * mx / (2 + mx)
-  qx <- c(qx, 1) # forced method - mortality rate max age + 1 is 100%
-  lx <- c(1, cumprod(1 - qx)) * cohort
-  dx <- -c(diff(lx), lx[n] * qx[n])
-  t <- (lx + c(lx[-1], 0)) / 2
-  Tx <- rev(cumsum(rev(t)))
-  ex <- Tx / lx
-  lt <- data.frame(lx = lx, dx = dx, t = t, Tx = Tx, ex = ex)[1:n,]
-  if (EX) ex[1] else lt
-}
-
-# cause-specific life table function
-# this works by creating a life table based on the all-cause mortality rates
-# it then applies the proportions of deaths at each age
-# the 'mat' argument is a matrix of cause-specific mortality rates
-
-cs.life.table <- function(mat, cohort = 100000) {
-  # all-cause life table
-  mx <- rowSums(mat)
-  n <- length(mx) + 1
-  qx <- 2 * mx / (2 + mx)
-  qx <- c(qx, 1) # forced method - mortality rate max age + 1 is 100%
-  lx <- c(1, cumprod(1 - qx)) * cohort
-  dx <- -c(diff(lx), lx[n] * qx[n])
-  # make life table data frame
-  lt <- data.frame(lx = lx, dx = dx)[1:n,]
-  # matrix of proportions of deaths by cause at each age
-  cm <- rbind(mat, 1) / rowSums(rbind(mat, 1))
-  cs.dx <- lt$dx * cm
-  colnames(cs.dx) <- paste0('dx_', colnames(mat))
-  # outputs
-  cbind(lt, cs.dx)[-nrow(lt),]
-}
-
 # ===========================
 # Attributable risk fractions
 # ---------------------------
-
-# Attributable risk fraction (in the exposed) = 1 - 1/RR
 
 fractions <- c(smoking = 1, cvd = 0.5, other_cancers = 0.3, drug_related = 1, hep = 1)
 
@@ -233,7 +226,6 @@ Dm <- deaths_ylls(sims = B, smoking = 0, drugs = 0)
 
 smoking_vars <- c('dx_smoking_smoking', 'dx_cvd_smoking', 'dx_otherCancers_smoking')
 drug_vars <- c('dx_hep_drugs', 'dx_drugRelated_drugs')
-
 s <- function (d, i = 1) { # 1 = deaths, 2 = YLLS
   if (length(d) == 1) {
     x <- d[[1]][i,]
@@ -317,6 +309,57 @@ png('Fig2.png', height = 7, width = 10, res = 300, units = 'in')
   text(75, c(0, cumsum(sdo70))[-4] + diff(c(0, cumsum(sdo70)))/2, labs3, adj = 0)
 dev.off()
 
+# =============================================
+# bar plot of attributable and prevented deaths
+# ---------------------------------------------
+
+x <- rbind(s(Ap), s(Bp), s(Cp), s(Dp)) / 1e5
+#x <- x[, c(1, 4:2)]
+y1 <- t(apply(cbind(0, x[,-1]), 1, cumsum))
+xl <- 0:3 * 4
+delta <- -t(x[1,] - t(x))
+waterfall_targets <-t(apply(delta[-1,-1], 1, function (y) x[1,1] + cumsum(y)))
+
+# waterfall chart
+
+waterfall <- function (start, targets, xleft, width = 0.5, cols = 1:3) {
+  yvals <- cbind(c(0, start, targets), c(start, targets, 0))[2:(length(targets)+1),]
+  mapply(rect,
+         xleft = xleft,
+         ybottom = apply(yvals, 1, min),
+         xright = xleft + width,
+         ytop = apply(yvals, 1, max),
+         col = cols)
+  segments(x0 = xleft, y0 = targets, x1 = xleft + width * 2, lty = 3)
+}
+
+cols <- brewer.pal(3, 'Set2')
+ys <- seq(0.4, 0.7, length.out = 4)
+
+png('Fig3.png', height = 5, width = 8, units = 'in', res = 300)
+  par(mar = c(6, 5, 0, 10), xpd = NA)
+  plot(1, type = 'n', xlim = c(0, 12.75), ylim = c(0, 0.7), axes = F, xlab = NA, ylab = NA)
+  rect(-0.25, 0:6/10, 12.75, 1:7/10, col = rep(c('white', 'grey93'), 4), border = NA)
+  rect(-0.25, 0, 12.75, 0.7)
+  segments(-0.25, x[1,1], x1 = 12.75, lty = 3)
+  mapply(rect,
+         xleft = xl,
+         ybottom = split(y1[,-4], f = 1:4),
+         xright = xl + 0.5,
+         ytop = split(y1[,-1], f = 1:4),
+         col = rep(list(cols), each = 4))
+  waterfall(start = x[1,1], targets = waterfall_targets[1,], xleft = 1:3, cols = cols)
+  waterfall(start = x[1,1], targets = waterfall_targets[2,], xleft = 5:7, cols = cols)
+  waterfall(start = x[1,1], targets = waterfall_targets[3,], xleft = 9:11, cols = cols)
+  segments(c(-0.25, 0.75, 4.75, 8.75, 12.75), y0 = 0, y1 = 0.7)
+  axis(2, 0:7 / 10, paste0(0:7 * 10, '%'), las = 2, pos = -0.25)
+  title(ylab = 'Risk of death before age 70')
+  text(0.25, -0.01, 'Observed\nmortality rates', srt = 90, adj = 1)
+  text(c(2.75, 6.75, 10.75), -0.01, c('Eliminating\nillicit\ndrugs', 'Eliminating\ntobacco\nsmoking', 'Eliminating illicit\ndrugs and\ntobacco\nsmoking'), adj = c(0.5,1))
+  rect(13, ys[-length(ys)], 13.5, ys[-1], col = cols)
+  text(13.75, ys[-length(ys)] + diff(ys)/2, c('Attributable to\nillicit drugs', 'Attributable to\ntobacco smoking', 'Attributable to\nother causes'), adj = 0)
+dev.off()
+
 # ==================================
 # comparison with general population
 # ----------------------------------
@@ -327,44 +370,3 @@ mgp <- fread("https://raw.githubusercontent.com/danlewer/hupio/main/mortality/si
 mgp <- mgp[opioids == F & age <= 70, lapply(.SD, sum), by = 'age'][, -'opioids']
 s(deaths_ylls(point = T, DATA = mgp))
 s(deaths_ylls(point = T, DATA = mgp), i = 2) / 100000
-
-# survival data
-
-survival <- data.frame(
-  age = 18:70,
-  lx_both = deaths_ylls(point = T, summary_only = F)[[1]]$life_table$lx,
-  lx_smoking = deaths_ylls(point = T, summary_only = F, smoking = 0)[[1]]$life_table$lx,
-  lx_drugs = deaths_ylls(point = T, summary_only = F, drugs = 0)[[1]]$life_table$lx,
-  lx_eliminate_both = deaths_ylls(point = T, summary_only = F, drugs = 0, smoking = 0)[[1]]$life_table$lx,
-  lx_genpop = lt_gen_pop$lx)
-
-# table at round ages
-
-survival_rounded <- survival[survival$age %in% c(18, 2:7 * 10),]
-survival_rounded <- data.frame(lapply(survival_rounded, function (x) prettyNum(round(x, 0), big.mark = ',')))
-fwrite(survival_rounded, 'survival_rounded.csv')
-
-# survival plot
-
-cols <- brewer.pal(5, 'Set1')
-emf('Fig3.png', width = 8, height = 6, units = 'in', res = 300)
-  par(xpd = NA, mar = c(4, 6, 0, 13))
-  plot(1, type = 'n', xlim = c(18, 70), ylim = c(0, 1e5), axes = F, xlab = NA, ylab = NA)
-  rect(18, 0, 70, 1e5, col = 'grey98')
-  axis(1, 2:7 * 10, pos = 0)
-  axis(2, 0:5 * 2e4, prettyNum(0:5 * 2e4, big.mark = ','), pos = 18, las = 2)
-  with(survival, {
-    lines(age, lx_both, col = cols[1], lwd = 1.5)
-    lines(age, lx_smoking, col = cols[2], lwd = 1.5)
-    lines(age, lx_drugs, col = cols[3], lwd = 1.5)
-    lines(age, lx_eliminate_both, col = cols[4], lwd = 1.5)
-    lines(age, lx_genpop, col = cols[5])
-    text(71, tail(lx_both, 1), 'Observed mortality rates', col = cols[1], adj = 0)
-    text(71, tail(lx_smoking, 1), 'Eliminate smoking-specific deaths', col = cols[2], adj = 0)
-    text(71, tail(lx_drugs, 1), 'Eliminate drugs-specific deaths', col = cols[3], adj = 0)
-    text(71, tail(lx_eliminate_both, 1), 'Eliminate both', col = cols[4], adj = 0)
-    text(71, tail(lx_genpop, 1), 'General population', col = cols[5], adj = 0)
-  })
-  title(xlab = 'Age', line = 2)
-  title(ylab = 'Number surviving in a cohort of 100,000', line = 3.5)
-dev.off()
