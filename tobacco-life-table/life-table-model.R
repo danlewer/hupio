@@ -116,22 +116,22 @@ cols <- brewer.pal(3, 'Set1')[3:1]
 emf('FigA.emf', height = 6.5, width = 8, units = 'in')
 
 par(mfrow = c(2, 3), mar = c(2, 3, 1, 1), oma = c(3, 3, 0, 0))
-  lapply(1:6, function (i) {
-    y <- m[, get(causes[i])] / m$follow_up * 1e5
-    ymax <- roundup(max(y), 2)
-    plot(1, type = 'n', xlab = NA, ylab = NA, xlim = c(18, 70), ylim = c(0, ymax), axes = F)
-    rect(18, 0, 70, ymax, col = 'grey98')
-    points(18:70, y)
-    axis(1, c(18, 3:7 * 10), pos = 0)
-    axis(2, yax(ymax), pos = 18, las = 2)
-    text(20, ymax * 0.98, titles[i], adj = c(0, 1))
-    with(pm[causes[i]][[1]], {
-      polygon(c(age, rev(age)), c(lower, rev(pmin(upper, ymax/1e5))) * 1e5, border = NA, col = add.alpha(cols[1], 0.3))
-      lines(18:70, pred * 1e5, col = cols[1])
-    })
+lapply(1:6, function (i) {
+  y <- m[, get(causes[i])] / m$follow_up * 1e5
+  ymax <- roundup(max(y), 2)
+  plot(1, type = 'n', xlab = NA, ylab = NA, xlim = c(18, 70), ylim = c(0, ymax), axes = F)
+  rect(18, 0, 70, ymax, col = 'grey98')
+  points(18:70, y)
+  axis(1, c(18, 3:7 * 10), pos = 0)
+  axis(2, yax(ymax), pos = 18, las = 2)
+  text(20, ymax * 0.98, titles[i], adj = c(0, 1))
+  with(pm[causes[i]][[1]], {
+    polygon(c(age, rev(age)), c(lower, rev(pmin(upper, ymax/1e5))) * 1e5, border = NA, col = add.alpha(cols[1], 0.3))
+    lines(18:70, pred * 1e5, col = cols[1])
   })
-  mtext('Age', side = 1, line = 1, outer = T, cex = 0.8)
-  mtext('Deaths per 100,000 person-years', side = 2, line = 1, outer = T, cex = 0.8)
+})
+mtext('Age', side = 1, line = 1, outer = T, cex = 0.8)
+mtext('Deaths per 100,000 person-years', side = 2, line = 1, outer = T, cex = 0.8)
 
 dev.off()
 
@@ -230,17 +230,19 @@ s <- function (d, i = 1) { # 1 = deaths, 2 = YLLS
   if (length(d) == 1) {
     x <- d[[1]][i,]
     x <- c(all = sum(x), smoking = sum(x[smoking_vars]), drugs = sum(x[drug_vars]))
-    return(c(x, other = x[1] - (x[2] + x[3])))
+    x <- c(x, other = x[1] - (x[2] + x[3]))
+    return(c(x, pc_smoking = x[2] / x[1] * 100, pc_drugs = x[3] / x[1] * 100, pc_other = x[4] / x[1] * 100))
   }
   x <- t(sapply(d, function (x) x[i,]))
   x <- cbind(all = rowSums(x), smoking = rowSums(x[, smoking_vars]), drugs = rowSums(x[, drug_vars]))
-  cbind(x, other = x[,1] - (x[,2] + x[,3]))
+  x <- cbind(x, other = x[,1] - (x[,2] + x[,3]))
+  cbind(x, pc_smoking = x[,2] / x[,1] * 100, pc_drugs = x[,3] / x[,1] * 100, pc_other = x[,4] / x[,1] * 100)
 }
 
 # create deaths results
 
-f <- function (x, digs = 1, units = 1000) {
-  x <- x / units
+f <- function (x, digs = 1, units = c(1000, 1000, 1000, 1000, 1, 1, 1)) {
+  x <- t(t(x) / units)
   x <- formatC(round(x, digs), big.mark = ',', format = 'f', digits = digs)
   `names<-`(paste0(x[1,], ' (', x[3,], ', ', x[4,], ')'), colnames(x))
 }
@@ -255,7 +257,7 @@ deaths_scenarios <- rbind(cbind(observed = f(rbind(point = s(Ap), apply(s(Am), 2
 
 # create YLL results
 
-f2 <- function (x) f(x, digs = 2, units = 100000)
+f2 <- function (x) f(x, digs = 2, units = c(100000, 100000, 100000, 100000, 1, 1, 1))
 yll_scenarios <- rbind(cbind(observed = f2(rbind(point = s(Ap, 2), apply(s(Am, 2), 2, quantile, probs = c(0.5, 0.025, 0.975)))),
                              eliminate_drugs = f2(rbind(point = s(Bp, 2), apply(s(Bm, 2), 2, quantile, probs = c(0.5, 0.025, 0.975)))),
                              eliminate_smoking = f2(rbind(point = s(Cp, 2), apply(s(Cm, 2), 2, quantile, probs = c(0.5, 0.025, 0.975)))),
@@ -292,21 +294,21 @@ labs3 <- paste0(labs3,
                 "\n", paste0(round(sdo69 / sum(sdo69) * 100, 1), '%', ' of premature deaths'))
 
 png('Fig2.png', height = 7, width = 10, res = 300, units = 'in')
-  par(mar = c(5, 6, 0, 15), xpd = NA)
-  plot(1, type = 'n', xlim = c(18, 70), ylim = c(0, 100000), xlab = NA, ylab = NA, axes = F)
-  for (i in 1:8) {
-    polygon(c(18:70, 70:18), y = c(ynums[i,], rev(ynums[i+1,])), col = cols[i], border = 'black')
-  }
-  rect(18, 0, 70, 100000)
-  axis(1, pos = 0)
-  axis(2, 0:5 * 20000, paste0(0:5 * 20, '%'), las = 2, pos = 18)
-  title(xlab = 'Age', line = 2)
-  title(ylab = 'Cumulative risk of death in a cohort of\npeople who use illicit opioids', line = 4)
-  ys <- seq(20000, 97500, length.out = 9)
-  rect(20, ys[-length(ys)], 23, ys[-1], col = cols)
-  text(25, ys[-length(ys)] + diff(ys)/2, c('Respiratory cancers\nand COPD', 'Cardiovascular diseases\nattributable to tobacco', 'Cancers other than respiratory\nattributable to tobacco', 'Viral\nhepatitis', 'Drug\npoisoning', 'Cardiovascular diseases\nnot attributable to tobacco', 'Cancers not attributable\nto tobacco', 'All other\ndeaths'), adj = 0)
-  arrows(73, c(0, cumsum(sdo70)[-3]) + 500, y1 = cumsum(sdo70) - 500, code = 3, length = 0.1, angle = 45, col = cols[c(3, 5, 8)])
-  text(75, c(0, cumsum(sdo70))[-4] + diff(c(0, cumsum(sdo70)))/2, labs3, adj = 0)
+par(mar = c(5, 6, 0, 15), xpd = NA)
+plot(1, type = 'n', xlim = c(18, 70), ylim = c(0, 100000), xlab = NA, ylab = NA, axes = F)
+for (i in 1:8) {
+  polygon(c(18:70, 70:18), y = c(ynums[i,], rev(ynums[i+1,])), col = cols[i], border = 'black')
+}
+rect(18, 0, 70, 100000)
+axis(1, pos = 0)
+axis(2, 0:5 * 20000, paste0(0:5 * 20, '%'), las = 2, pos = 18)
+title(xlab = 'Age', line = 2)
+title(ylab = 'Cumulative risk of death in a cohort of\npeople who use illicit opioids', line = 4)
+ys <- seq(20000, 97500, length.out = 9)
+rect(20, ys[-length(ys)], 23, ys[-1], col = cols)
+text(25, ys[-length(ys)] + diff(ys)/2, c('Respiratory cancers\nand COPD', 'Cardiovascular diseases\nattributable to tobacco', 'Cancers other than respiratory\nattributable to tobacco', 'Viral\nhepatitis', 'Drug\npoisoning', 'Cardiovascular diseases\nnot attributable to tobacco', 'Cancers not attributable\nto tobacco', 'All other\ndeaths'), adj = 0)
+arrows(73, c(0, cumsum(sdo70)[-3]) + 500, y1 = cumsum(sdo70) - 500, code = 3, length = 0.1, angle = 45, col = cols[c(3, 5, 8)])
+text(75, c(0, cumsum(sdo70))[-4] + diff(c(0, cumsum(sdo70)))/2, labs3, adj = 0)
 dev.off()
 
 # =============================================
@@ -337,27 +339,27 @@ cols <- brewer.pal(3, 'Set2')
 ys <- seq(0.4, 0.7, length.out = 4)
 
 png('Fig3.png', height = 5, width = 8, units = 'in', res = 300)
-  par(mar = c(6, 5, 0, 10), xpd = NA)
-  plot(1, type = 'n', xlim = c(0, 12.75), ylim = c(0, 0.7), axes = F, xlab = NA, ylab = NA)
-  rect(-0.25, 0:6/10, 12.75, 1:7/10, col = rep(c('white', 'grey93'), 4), border = NA)
-  rect(-0.25, 0, 12.75, 0.7)
-  segments(-0.25, x[1,1], x1 = 12.75, lty = 3)
-  mapply(rect,
-         xleft = xl,
-         ybottom = split(y1[,-4], f = 1:4),
-         xright = xl + 0.5,
-         ytop = split(y1[,-1], f = 1:4),
-         col = rep(list(cols), each = 4))
-  waterfall(start = x[1,1], targets = waterfall_targets[1,], xleft = 1:3, cols = cols)
-  waterfall(start = x[1,1], targets = waterfall_targets[2,], xleft = 5:7, cols = cols)
-  waterfall(start = x[1,1], targets = waterfall_targets[3,], xleft = 9:11, cols = cols)
-  segments(c(-0.25, 0.75, 4.75, 8.75, 12.75), y0 = 0, y1 = 0.7)
-  axis(2, 0:7 / 10, paste0(0:7 * 10, '%'), las = 2, pos = -0.25)
-  title(ylab = 'Risk of death before age 70')
-  text(0.25, -0.01, 'Observed\nmortality rates', srt = 90, adj = 1)
-  text(c(2.75, 6.75, 10.75), -0.01, c('Eliminating\nillicit\ndrugs', 'Eliminating\ntobacco\nsmoking', 'Eliminating illicit\ndrugs and\ntobacco\nsmoking'), adj = c(0.5,1))
-  rect(13, ys[-length(ys)], 13.5, ys[-1], col = cols)
-  text(13.75, ys[-length(ys)] + diff(ys)/2, c('Attributable to\nillicit drugs', 'Attributable to\ntobacco smoking', 'Attributable to\nother causes'), adj = 0)
+par(mar = c(6, 5, 0, 10), xpd = NA)
+plot(1, type = 'n', xlim = c(0, 12.75), ylim = c(0, 0.7), axes = F, xlab = NA, ylab = NA)
+rect(-0.25, 0:6/10, 12.75, 1:7/10, col = rep(c('white', 'grey93'), 4), border = NA)
+rect(-0.25, 0, 12.75, 0.7)
+segments(-0.25, x[1,1], x1 = 12.75, lty = 3)
+mapply(rect,
+       xleft = xl,
+       ybottom = split(y1[,-4], f = 1:4),
+       xright = xl + 0.5,
+       ytop = split(y1[,-1], f = 1:4),
+       col = rep(list(cols), each = 4))
+waterfall(start = x[1,1], targets = waterfall_targets[1,], xleft = 1:3, cols = cols)
+waterfall(start = x[1,1], targets = waterfall_targets[2,], xleft = 5:7, cols = cols)
+waterfall(start = x[1,1], targets = waterfall_targets[3,], xleft = 9:11, cols = cols)
+segments(c(-0.25, 0.75, 4.75, 8.75, 12.75), y0 = 0, y1 = 0.7)
+axis(2, 0:7 / 10, paste0(0:7 * 10, '%'), las = 2, pos = -0.25)
+title(ylab = 'Risk of death before age 70')
+text(0.25, -0.01, 'Observed\nmortality rates', srt = 90, adj = 1)
+text(c(2.75, 6.75, 10.75), -0.01, c('Eliminating\nillicit\ndrugs', 'Eliminating\ntobacco\nsmoking', 'Eliminating illicit\ndrugs and\ntobacco\nsmoking'), adj = c(0.5,1))
+rect(13, ys[-length(ys)], 13.5, ys[-1], col = cols)
+text(13.75, ys[-length(ys)] + diff(ys)/2, c('Attributable to\nillicit drugs', 'Attributable to\ntobacco smoking', 'Attributable to\nother causes'), adj = 0)
 dev.off()
 
 # ==================================
